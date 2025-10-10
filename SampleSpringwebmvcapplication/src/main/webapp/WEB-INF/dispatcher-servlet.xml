@@ -15,7 +15,7 @@
     <mvc:annotation-driven />
 
     <!-- Scan for components (controllers, services, DAOs) -->
-    <context:component-scan base-package="ormconfiguration,com.mycompany.samplespringwebmvcapplication.controller" />
+    <context:component-scan base-package="ormconfiguration.Dao,com.mycompany.samplespringwebmvcapplication.controller" />
 
     <!-- View resolver example -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

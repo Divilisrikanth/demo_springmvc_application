@@ -3,6 +3,5 @@ ormconfiguration\Dao\UserDetailsDao.class
 ormconfiguration\entities\UserDetails.class
 Transactions\Accoutoperations.class
 com\mycompany\samplespringwebmvcapplication\controller\Routes.class
-ormconfiguration\HibernateConfig.class
 ormconfiguration\controller\UserController.class
 Transactions\AccountTransactions.class

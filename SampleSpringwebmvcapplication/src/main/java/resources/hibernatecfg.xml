@@ -11,6 +11,8 @@
         http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <context:property-placeholder location="classpath:db.properties"/>
+
     <!-- Scan for @Component, @Repository, etc. -->
     <context:component-scan base-package="ormconfiguration" />
 
