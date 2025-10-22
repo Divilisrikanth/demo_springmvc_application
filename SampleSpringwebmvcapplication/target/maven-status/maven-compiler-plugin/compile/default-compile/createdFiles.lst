@@ -1,0 +1,4 @@
+ormconfiguration\entities\UserDetails.class
+Transactions\Accoutoperations.class
+Transactions\AccountTransactions.class
+com\mycompany\samplespringwebmvcapplication\controller\Routes.class
