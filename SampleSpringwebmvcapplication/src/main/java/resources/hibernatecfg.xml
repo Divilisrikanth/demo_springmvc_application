@@ -11,10 +11,10 @@
         http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:property-placeholder location="classpath:db.properties"/>
+    <context:property-placeholder location="classpath:application.properties"/>
 
     <!-- Scan for @Component, @Repository, etc. -->
-    <context:component-scan base-package="ormconfiguration" />
+    <context:component-scan base-package="com.mycompany.samplespringwebmvcapplication.controller.configuration" />
 
     <!-- DataSource definition -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">

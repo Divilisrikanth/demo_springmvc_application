@@ -5,22 +5,35 @@
  */
 package Transactions;
 
+
+import org.springframework.stereotype.Component;
 /**
  *
  * @author saibhagawan
  */
+@Component
 public class AccountTransactions extends Accoutoperations {
-
+    
     @Override
     public String moneyDeposited(int deposit) {
          amount += deposit;
-         return "balnce after deposit" +" "+amount;
+         String strnumber = Integer.toString(amount);
+         return strnumber;
     }
 
     @Override
-    public String moneyWithdrawn(int withdrawl) {
-          amount -= withdrawl;
-        return "balance after withdrawl" +" "+amount;
+    public String moneyWithdrawn( int withdrawl) {
+          if( withdrawl<amount){
+              System.out.println("amout before withdrawl"+amount);
+             amount -= withdrawl;
+             String strnumber = Integer.toString(amount);
+             System.out.println("amount after withdrawl"+amount);
+             return  ":"+" "+strnumber;
+          }else{
+              return ": Insufficiemt Balnce in your account unable to process  the transaction";
+          }
+              
+        
     }
 
     @Override

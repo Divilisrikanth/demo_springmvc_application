@@ -11,7 +11,8 @@ package Transactions;
  */
 abstract class Accoutoperations {
     protected int amount=0;
-    private int withdrawl;
+    
+    protected int withdrawl;
     private int deposit;
     
     abstract String moneyDeposited(int deposit);

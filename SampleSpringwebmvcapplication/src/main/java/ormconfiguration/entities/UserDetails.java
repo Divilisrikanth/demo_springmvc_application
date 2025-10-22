@@ -11,12 +11,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
+/**Acc
  *
  * @author saibhagawan
  */
 @Entity
-@Table(name="UsersDetailsList")
+@Table(name="UsersDetails")
 public class UserDetails {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

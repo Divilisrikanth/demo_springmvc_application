@@ -12,10 +12,14 @@
            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- Enable annotation-driven Spring MVC features -->
+   
     <mvc:annotation-driven />
-
+           <!-- <context:property-placeholder location="classpath:application.properties"/>-->
     <!-- Scan for components (controllers, services, DAOs) -->
-    <context:component-scan base-package="ormconfiguration.Dao,com.mycompany.samplespringwebmvcapplication.controller" />
+ 
+ <!--<context:component-scan base-package="com.mycompany.samplespringwebmvcapplication.controller.ormconfiguration.controller" />-->
+    <context:component-scan base-package="Transactions" />
+    <context:component-scan base-package="com.mycompany.samplespringwebmvcapplication.controller" />
 
     <!-- View resolver example -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

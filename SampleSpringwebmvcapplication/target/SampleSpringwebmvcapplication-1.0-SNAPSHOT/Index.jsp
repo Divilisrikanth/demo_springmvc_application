@@ -15,30 +15,32 @@
         <form method="post" action="${pageContext.request.contextPath}/Users/create">
 
             <label>Id</label>
-            <input type="text" name="Id" placeholder="Please Enter your Id"/>
+            <input type="text" name="id" placeholder="Please Enter your Id"/>
+            <label>UserName</label>
+            <input type="text" name="userName" placeholder="please Enter your userName"/>
             <label>Account Number</label>
             <input type="text" name="userAccountNumber" placeholder="Please Enter your Account Number"/>
-            <label>uniqueId</label>
+            <label>unique Id</label>
             <input type="text" name="uniqueId" placeholder="Please Enter your Unique id"/>
-            <label>panNumber</label>
+            <label>pan Number</label>
             <input type="text" name="panNumber" placeholder="Please Enter your pan number"/>
             <label>Address</label>
             <input type="text" name="Address" placeholder="Please Enter your Address"/>
-            <label>phoneNumber</label>
+            <label>phone Number</label>
             <input type="text" name="phoneNumber" placeholder="Please Enter your Phone number"/>
-            <label>accountType</label>
+            <label>account Type</label>
             <input type="text" name="accountType" placeholder="Please Enter your Account Type "/>
-            <label>ifsccode</label>
+            <label>ifsc code</label>
             <input type="text" name="ifsccode" placeholder="Please Enter your ifsc code "/>
-           <button onclick="getuseramount">Submit</button>
+           <button>Submit</button>
         </form>
-        <form method="get" action="${pageContext.request.contextPath}/deposit">
+        <form method="post" action="${pageContext.request.contextPath}/deposit">
             <label>Please Enter your Account number</label>
             <input type="text"  name="amount",placeHolder="Please Enter the amount"/>
             <h2Deposit</></h2>
              <button onclick="getuseramount">Submit</button>
         </form>
-            <form method="get" action="${pageContext.request.contextPath}/withdrawl">
+            <form method="post" action="${pageContext.request.contextPath}/withdrawl">
                 <h2>With draw</h2>
                 <label>Please Enter your Account number</label>
                 <input type="text"  name="amount",placeHolder="Please Enter the amount"/>

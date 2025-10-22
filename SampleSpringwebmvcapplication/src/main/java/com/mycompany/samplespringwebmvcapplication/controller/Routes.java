@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package com.mycompany.samplespringwebmvcapplication.controller;
-import ormconfiguration.Services.UserDetailsService;
-/**
+/*
  *
  * @author saibhagawan
  */
@@ -17,38 +16,47 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+//import ormconfiguration.Services.UserDetailsService;
 
 @Controller
 public class Routes {
-    AccountTransactions transactions = new AccountTransactions();
+   @Autowired
+   private  AccountTransactions transactions;
+   //AccountTransactions transactions = new AccountTransactions();
     @RequestMapping("/homepage")
     @ResponseBody
     public String showHomePage(){
         return "Home page view";
     }
-    @RequestMapping("/deposit")
+    @PostMapping("/deposit")
     
-    public String showDepositusPage(Model model){
-        String resultafterdeposit = transactions.moneyDeposited(800);
+    public String showDepositusPage(@RequestParam("amount") String amount, Model model){
+     
+        double amountValue = Double.parseDouble(amount);
+         String resultafterdeposit = transactions.moneyDeposited((int)amountValue);
         String resultedbalanceafterdeposit = transactions.moneyPresentinAccount();
         System.out.println("in controller"+""+resultedbalanceafterdeposit);
         model.addAttribute("message","money successfully deposited into your Account :"+ resultedbalanceafterdeposit);
         return "Deposit";
     }
-   @RequestMapping("/withdrawl")
+   @PostMapping("/withdrawl")
    
-   public String showWithDrawlPage(Model model){
-       String resultafterwithdrawl = transactions.moneyWithdrawn(100);
-       String resultedbalanceafterwithdrawl = transactions.moneyPresentinAccount();
-       model.addAttribute("message","money successfully withdrawn from your account "+"balance after withdrawn"+resultedbalanceafterwithdrawl);
-       return "withdrawn";
+   public String showWithDrawlPage(@RequestParam("amount")String amount ,Model model){
+       double amountValue = Double.parseDouble(amount);
+   
+       String resultafterwithdrawl = transactions.moneyWithdrawn((int)amountValue);
+       //String resultedbalanceafterwithdrawl = transactions.moneyPresentinAccount();
+       model.addAttribute("message","money successfully withdrawn from your account "+"balance after withdrawn"+resultafterwithdrawl);
+      return "withdrawn";
    }
-  
+
+}
+
  
       
-  
+
       
-  }
+  
    
    
     
